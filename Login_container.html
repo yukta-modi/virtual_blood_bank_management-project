@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login_container.css">
+    <title>Registration and Login System</title>
+</head>
+<body>
+
+    <div id="recaptcha-container"></div>
+
+    <div class="tabs">
+        <button class="tab-link active" data-tab="users">Donors</button>
+        <button class="tab-link" data-tab="hospital-admin">Hospital Admin</button>
+        <button class="tab-link" data-tab="admin">Admin</button>
+    </div>
+
+    <div id="users" class="form-container active">
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="user-email">Email Address</label>
+                <input type="email" id="user-email" name="user-email" required>
+            </div>
+            <div class="form-group">
+                <label for="user-password">Password</label>
+                <input type="password" id="user-password" name="user-password" required>
+            </div>
+            
+            <a href="#" id="forgot-password-donor" class="forgot-password-link">Forgot Password?</a>
+            <div class="button-group">
+                <button type="submit" id="login-button">Login</button>
+                <button id="register-button">Register</button> 
+            </div>
+        </form>
+    </div>
+
+    <div id="hospital-admin" class="form-container">
+        <form id="hospitalLoginForm"> 
+            <div class="form-group">
+                <label for="hospital-admin-email">Email Address</label>
+                <input type="email" id="hospital-admin-email" name="hospital-admin-email" required>
+            </div>
+            <div class="form-group">
+                <label for="hospital-admin-password">Password</label>
+                <input type="password" id="hospital-admin-password" name="hospital-admin-password" required>
+            </div>
+            <div class="form-group">
+                <label for="hospital-admin-reference-number">Reference No.</label>
+                <input type="text" id="hospital-admin-reference-number" name="hospital-admin-reference-number" required>
+            </div>
+
+            <a href="#" id="forgot-password-hospital" class="forgot-password-link">Forgot Password?</a> 
+
+            <div class="button-group">
+                <button type="submit">Login</button>
+                <button id="register-button-hospital">Register</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="admin" class="form-container">
+        <form>
+            <div class="form-group">
+                <label for="admin-email">Email Address</label>
+                <input type="email" id="admin-email" name="admin-email" required>
+            </div>
+            <div class="form-group">
+                <label for="admin-password">Password</label>
+                <input type="password" id="admin-password" name="admin-password" required>
+            </div>
+            <div class="button-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <script type="module" src="Login_container.js" defer></script>
+</body>
+</html>

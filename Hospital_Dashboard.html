@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Admin Dashboard</title>
+    <link rel="stylesheet" href="Hospital_Dashboard.css">
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Appointment</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-target="pendingList" class="sidebar-link">Pending List</a></li>
+                    <a href="#" data-target="donorsRecord" class="sidebar-link">Donors Record</a></li> 
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Blood Storage</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-target="storageLocator" class="sidebar-link">Storage Locator</a></li>
+                    <li><a href="#" data-target="storage1" class="sidebar-link">Storage1</a></li>
+                    <li><a href="#" data-target="storage2" class="sidebar-link">Storage2</a></li>
+                    <li><a href="#" data-target="storage3" class="sidebar-link">Storage3</a></li>
+                    <li><a href="#" data-target="storage4" class="sidebar-link">Storage4</a></li>
+                </ul>
+            </li>
+            <li><a href="#" data-target="awareness" class="sidebar-link">Awareness</a></li>
+            <li><a href="#" data-target="logout" class="sidebar-link">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div id="pendingList" class="content-section" style="display: none;">
+            <h2>Pending List</h2>
+            <div id="appointmentsList" class="appointments-container"></div>
+        </div>
+
+        <div id="donorsRecord" class="content-section">
+            <h2>Donors Record</h2>
+            <div id="donorsRecordList"></div> 
+        </div>
+        
+
+        <div id="storageLocator" class="content-section" style="display: none;">
+            <h2>Storage Locator</h2>
+            <input type="text" id="addressInput" placeholder="Enter hospital address">
+            <button id="searchButton">Search Nearby Blood Storage</button>
+            <p id="nearestStorage">Nearest Storage: </p>
+        </div>
+
+        <div id="storage1" class="content-section" style="display: none;">
+            <h2>Storage 1</h2>
+            <div id="storage1Content" class="storage-container"></div>
+        </div>
+
+        <div id="storage2" class="content-section" style="display: none;">
+            <h2>Storage 2</h2>
+            <div id="storage2Content" class="storage-container"></div>
+        </div>
+
+        <div id="storage3" class="content-section" style="display: none;">
+            <h2>Storage 3</h2>
+            <div id="storage3Content" class="storage-container"></div>
+        </div>
+
+        <div id="storage4" class="content-section" style="display: none;">
+            <h2>Storage 4</h2>
+            <div id="storage4Content" class="storage-container"></div>
+        </div>
+
+        <div id="awareness" class="content-section" style="display: none;">
+            <h2>Awareness</h2>
+            <div id="awarenessPosts">
+               
+            </div>
+        </div>
+
+        <div id="logout" class="content-section" style="display: none;">
+            <h2>Logout</h2>
+            <p>Logout functionality goes here.</p>
+        </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPm5wXyaacdzd4MpEsYI1UuP2c3-7Hy34&libraries=geometry"></script>
+    <script type="module" src="Hospital_Dashboard.js" defer></script>
+</body>
+</html>

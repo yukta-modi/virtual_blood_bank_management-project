@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="Users_Dashboard.css">
+    <title>Users Dashboard</title>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#" data-target="profile" class="sidebar-link">Profile</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Appointment Booking</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-target="donationAppointments" class="sidebar-link">Donation Appointment</a></li>
+                    <li><a href="#" data-target="bloodtestAppointments" class="sidebar-link">BloodTest Appointment</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Appointments List</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-target="donationAppointments_list" class="sidebar-link">Donation Appointment list</a></li>
+                    <li><a href="#" data-target="bloodtestAppointments_list" class="sidebar-link">BloodTest Appointment list</a></li>
+                </ul>
+            </li>
+            <li><a href="#" data-target="awareness" class="sidebar-link">Awareness</a></li>
+            <li><a href="#" data-target="logout" class="sidebar-link">Logout</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div id="profile" class="content-section active">
+            <h2>Profile</h2>
+            <p><strong>First Name:</strong> <span id="profileFirstName"></span></p>
+            <p><strong>Last Name:</strong> <span id="profileLastName"></span></p>
+            <p><strong>Blood Group:</strong> <span id="profileBloodGroup"></span></p>
+            <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+            <p><strong>Mobile Number:</strong> <span id="profileMobileNumber"></span></p>
+            <p><strong>Address:</strong> <span id="profileAddress"></span></p>
+        </div>
+
+        <div id="donationAppointments" class="content-section">
+            <h2>Book a Donation Appointment</h2>
+            <input type="text" id="donationdatetimePicker" placeholder="Select Date and Time">
+            <div class="searchable-dropdown">
+                <input type="text" id="donationlocationSearch" placeholder="Search Hospital...">
+                <div id="donationlocationDropdown" class="dropdown-items">
+                </div>
+            </div>
+            <button id="donationButton">Book Appointment</button>
+        </div>
+
+        <div id="bloodtestAppointments" class="content-section">
+            <h2>Book a BloodTest Appointment</h2>
+            <input type="text" id="testdatetimePicker" placeholder="Select Date and Time">
+            <div class="searchable-dropdown">
+                <input type="text" id="testlocationSearch" placeholder="Search Hospital...">
+                <div id="testlocationDropdown" class="dropdown-items"></div>
+            </div>
+            <button id="bookAppointmentButton">Book Appointment</button>
+        </div>
+
+        <div id="donationAppointments_list" class="content-section">
+            <h2>Donation Appointments</h2>
+            <div id="donationAppointmentsList"></div>
+        </div>
+        
+        <div id="bloodtestAppointments_list" class="content-section">
+            <h2>BloodTest Appointments</h2>
+            <div id="bloodtestAppointmentsList"></div> 
+        </div>
+
+        <div id="awareness" class="content-section">
+            <h2>Awareness</h2>
+            <div id="awarenessPosts">
+               
+            </div>
+        </div>
+
+        <div id="logout" class="content-section">
+            <h2>Logout</h2>
+            <p>Logout functionality goes here.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/es.js"></script>
+    <script src="Users_Dashboard.js" type="module"></script>
+</body>
+</html>

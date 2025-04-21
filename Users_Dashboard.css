@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    height: 100vh;
+}
+
+.hidden-element {
+    display: none;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    padding-top: 20px;
+    color: #ecf0f1;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: left;
+}
+
+.sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.sidebar ul li a:hover {
+    background-color: #34495e;
+}
+
+.dropdown-menu {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.dropdown-menu li a {
+    color: #bdc3c7;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+}
+
+h2 {
+    color: #2c3e50;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.searchable-dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.searchable-dropdown input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.dropdown-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: none;
+}
+
+.dropdown-items div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-items div:hover {
+    background-color: #f1f1f1;
+}
+
+.flatpickr-calendar {
+    background: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.flatpickr-months {
+    background: #f7f7f7;
+    color: #333;
+}
+
+.flatpickr-weekdays {
+    background: #f9f9f9;
+    color: #333;
+}
+
+.flatpickr-days {
+    background: #fff;
+}
+
+.flatpickr-day {
+    border-radius: 5px;
+    color: #333;
+}
+
+.flatpickr-day:hover {
+    background: #ddd;
+}
+
+.flatpickr-day.selected {
+    background: #007BFF;
+    color: #fff;
+}
+.appointment-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
